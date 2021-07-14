@@ -59,8 +59,11 @@ def findGame():
             print("\nThere is a game, but it is away:")
             print("\tRed Sox @ " + matchup)
         print("\t" + gametime)
-        webbrowser.open(url)
     else:
         print("\nNo Red Sox game today! MBTA is safe owo")
+    openBrowser = input("\nWould you like to see the schedule online in your browser? (yes/no)\n")
+    if(openBrowser.upper() == "YES"):
+        print("opening browser...")
+        webbrowser.open(url)
 
 findGame()
