@@ -53,17 +53,18 @@ def findGame():
         gametime = findGameTime(nextGame)
         matchup = str(findMatchupName(matchup))
         if("@" not in isHome):
-            print("\nThere is a game today! FML!:")
+            print("\nThere is a game today! Here is the matchup:")
             print("\tRed Sox vs " + matchup)
         else:
             print("\nThere is a game, but it is away:")
             print("\tRed Sox @ " + matchup)
-        print("\t" + gametime)
+        print("\t" + ' '.join(gametime.split()))
     else:
-        print("\nNo Red Sox game today! MBTA is safe owo")
+        print("\nNo Red Sox game today! MBTA will not be packed")
     openBrowser = input("\nWould you like to see the schedule online in your browser? (yes/no)\n")
     if(openBrowser.upper() == "YES"):
         print("opening browser...")
+        url = "https://www.mlb.com/redsox/schedule"
         webbrowser.open(url)
 
 findGame()
