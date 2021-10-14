@@ -3,4 +3,5 @@ Simple Web Scraping script to let my fellow Bostonians know if there is a Red So
 
 ## To Run:
 You can run this simple python script in any terminal/OS, as long as you have python3 installed!
+
 Command: python3 RedSox.py
